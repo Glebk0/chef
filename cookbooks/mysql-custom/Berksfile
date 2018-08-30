@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+source 'https://supermarket.chef.io'
+
+metadata
+
+cookbook 'httpd', '~> 0.6'
+cookbook 'mysql', '~> 8.5'
+cookbook 'mysql2_chef_gem', '~> 2.1'
+cookbook 'database', '~> 6.1'

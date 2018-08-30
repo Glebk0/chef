@@ -1,0 +1,15 @@
+[Unit]
+Description=Tomcat
+After=network.target
+
+[Service]
+User=tomcat
+WorkingDirectory=/opt/tomcat
+Environment=CATALINA_HOME=/opt/tomcat
+Environment=CATALINE_BASE=/opt/tomcat
+ExecStart=/opt/tomcat/bin/catalina.sh run
+ExecStop=/opt/tomcat/bin/shutdown.sh
+SyslogIdentifier=tomcat-%i
+
+[Install]
+WantedBy=multi-user.target
